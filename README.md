@@ -13,7 +13,7 @@ python3 scripts/fetch13f.py data/resolved.json data/raw      # download + parse 
 python3 scripts/prep.py data                                 # drop options/ETFs, fix $-thousands filers -> data/holdings_clean.csv
 python3 scripts/analyze2.py data scripts                     # raw vs IDF cosine, cutoff sweep, Q1 vs Q2, hub-drop check
 python3 scripts/figure2.py data scripts .                    # network.png
-python3 scripts/build_pdf2.py report.pdf network.png "<repo url>"
+python3 scripts/build_pdf2.py report.pdf network.png "https://github.com/tha63030037-create/6810414003_madt7202_mid_network"
 ```
 `data/` already holds the outputs used in the report, so the first three steps can be skipped.
 To re-run for Q3 2026, change the two period dates (`2026-06-30`, `2026-03-31`) in `scripts/resolve.py`, `scripts/analyze2.py` and `scripts/figure2.py`.
